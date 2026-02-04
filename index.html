@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgSea - 专业的西洋图床服务 | 高速稳定的图片托管平台</title>
+    <meta name="description" content="ImgSea是专业的西洋图床服务平台，提供高速稳定的图片托管、外链生成、CDN加速等服务。支持多种上传方式，适合开发者、设计师和内容创作者。">
+    <meta name="keywords" content="图床, 图片托管, 外链生成, CDN加速, 西洋图床, ImgSea">
+    <meta name="author" content="ImgSea">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="yandex" content="index, follow">
+    
+    <!-- Open Graph 标签 -->
+    <meta property="og:title" content="ImgSea - 专业的西洋图床服务">
+    <meta property="og:description" content="高速稳定的图片托管平台，支持多种上传方式和CDN加速">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imgsea.com">
+    <meta property="og:image" content="https://imgsea.com/og-image.jpg">
+    
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ImgSea - 专业的西洋图床服务">
+    <meta name="twitter:description" content="高速稳定的图片托管平台，支持多种上传方式和CDN加速">
+    <meta name="twitter:image" content="https://imgsea.com/twitter-image.jpg">
+
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"KquvReXjjLI3PAbO",ck:"KquvReXjjLI3PAbO"})</script>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ImgSea",
+        "url": "https://imgsea.com",
+        "description": "专业的西洋图床服务平台，提供高速稳定的图片托管、外链生成、CDN加速等服务",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://imgsea.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(135deg, #165DFF 0%, #0040C9 100%);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-dark">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-cloud-upload text-primary text-2xl"></i>
+                <span class="text-xl font-bold">ImgSea</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-primary transition-colors">功能特性</a>
+                <a href="#guide" class="text-gray-600 hover:text-primary transition-colors">使用指南</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary transition-colors">价格方案</a>
+                <a href="#tech" class="text-gray-600 hover:text-primary transition-colors">技术优势</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-primary transition-colors">用户评价</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="px-4 py-2 text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors">登录</a>
+                <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="pt-28 pb-20 bg-gradient-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-shadow">
+                        专业的西洋图床服务
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90">
+                        为开发者、设计师和内容创作者提供稳定、高速、安全的图片托管解决方案
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                            免费开始使用
+                        </a>
+                        <a href="#features" class="px-8 py-3 bg-transparent border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <img src="https://picsum.photos/seed/imgsea/600/400" alt="ImgSea 演示 - 专业图床服务界面" class="rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌定位 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">品牌定位</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    ImgSea 是专为全球用户打造的专业图床服务，致力于提供最稳定、最高效的图片托管体验
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-cogs text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">核心功能</h3>
+                    <p class="text-gray-600">
+                        支持多种上传方式，提供高速CDN加速，稳定的外链服务，以及强大的图片管理功能
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">目标用户</h3>
+                    <p class="text-gray-600">
+                        面向开发者、设计师、自媒体创作者、电商卖家等需要稳定图片托管服务的用户
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-trophy text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">核心优势</h3>
+                    <p class="text-gray-600">
+                        高速稳定、安全可靠、操作简单、性价比高，提供专业的技术支持和服务保障
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能介绍 -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">功能特性</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    全面了解 ImgSea 的强大功能，满足您的各种图片托管需求
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-upload text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">多种上传方式</h3>
+                            <p class="text-gray-600">
+                                支持拖拽上传、URL上传、文件选择上传，让您的图片上传更加便捷
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-file-image-o text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">丰富格式支持</h3>
+                            <p class="text-gray-600">
+                                支持 JPG, PNG, GIF, WebP, SVG 等主流图片格式，满足不同场景需求
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-hdd-o text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">充足存储空间</h3>
+                            <p class="text-gray-600">
+                                免费版提供 10GB 存储空间，付费版最高可达 1TB，满足大量图片存储需求
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-bolt text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">极速访问体验</h3>
+                            <p class="text-gray-600">
+                                全球 CDN 加速，确保图片加载速度快，用户体验流畅
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-lock text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">稳定外链服务</h3>
+                            <p class="text-gray-600">
+                                永久有效的图片外链，支持自定义域名，确保图片在任何地方都能正常显示
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-shield text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">隐私保护措施</h3>
+                            <p class="text-gray-600">
+                                提供图片隐私设置，支持密码保护和访问控制，确保您的图片安全
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-paint-brush text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">图片编辑功能</h3>
+                            <p class="text-gray-600">
+                                内置图片编辑器，支持裁剪、旋转、添加水印等基础编辑功能
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                            <i class="fa fa-line-chart text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">详细统计分析</h3>
+                            <p class="text-gray-600">
+                                提供图片访问统计，让您了解图片的使用情况和受众分布
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用指南 -->
+    <section id="guide" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">使用指南</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    简单几步，轻松上手 ImgSea 图床服务
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-primary text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">注册账号</h3>
+                    <p class="text-gray-600">
+                        点击注册按钮，填写邮箱和密码，完成账号注册
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-primary text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">上传图片</h3>
+                    <p class="text-gray-600">
+                        选择图片文件或拖拽图片到上传区域，等待上传完成
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-primary text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">获取外链</h3>
+                    <p class="text-gray-600">
+                        上传完成后，复制图片外链，即可在任意地方使用
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-primary text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">管理图片</h3>
+                    <p class="text-gray-600">
+                        在图片库中查看、编辑、删除或分享您的图片
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格方案 -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">价格方案</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    选择适合您的套餐，享受专业的图床服务
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">免费版</h3>
+                        <p class="text-gray-600 mb-6">适合个人用户和小型项目</p>
+                        <div class="text-4xl font-bold mb-6">¥0<span class="text-lg font-normal text-gray-500">/永久</span></div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>10GB 存储空间</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>每月 100GB 带宽</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>基础图片编辑</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>普通 CDN 加速</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-times text-red-500 mt-1 mr-3"></i>
+                                <span>自定义域名</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-times text-red-500 mt-1 mr-3"></i>
+                                <span>API 访问</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 text-center text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            免费开始使用
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-primary">
+                    <div class="bg-primary text-white p-4">
+                        <span class="text-sm font-semibold">推荐</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">专业版</h3>
+                        <p class="text-gray-600 mb-6">适合专业用户和商业项目</p>
+                        <div class="text-4xl font-bold mb-6">¥99<span class="text-lg font-normal text-gray-500">/年</span></div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>100GB 存储空间</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>每月 1TB 带宽</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>高级图片编辑</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>全球 CDN 加速</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>自定义域名</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>API 访问</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 text-center bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                            立即购买
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术优势 -->
+    <section id="tech" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">技术优势</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    领先的技术架构，为您的图片托管提供可靠保障
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-globe text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">CDN 加速</h3>
+                    <p class="text-gray-600">
+                        全球分布式 CDN 节点，确保图片在任何地区都能快速加载
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-mobile text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">多端适配</h3>
+                    <p class="text-gray-600">
+                        支持 PC 端、移动端、平板等多种设备，随时随地管理您的图片
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-code text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">API 支持</h3>
+                    <p class="text-gray-600">
+                        提供 RESTful API，支持第三方应用集成，满足个性化需求
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评价 -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">用户评价</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    听听用户怎么说
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/seed/user1/100/100" alt="张小明 - 前端开发工程师" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">张小明</h4>
+                            <p class="text-gray-500 text-sm">前端开发工程师</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "ImgSea 是我用过的最好的图床服务之一，上传速度快，外链稳定，界面简洁易用。"
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/seed/user2/100/100" alt="李小红 - UI 设计师" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">李小红</h4>
+                            <p class="text-gray-500 text-sm">UI 设计师</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "作为设计师，我需要经常分享设计稿，ImgSea 的自定义域名和高速 CDN 让我的工作效率大大提高。"
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/seed/user3/100/100" alt="王大锤 - 自媒体创作者" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">王大锤</h4>
+                            <p class="text-gray-500 text-sm">自媒体创作者</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "免费版就已经足够满足我的需求了，存储空间大，访问速度快，非常适合自媒体使用。"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fa fa-cloud-upload text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">ImgSea</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        专业的西洋图床服务，为全球用户提供稳定、高速、安全的图片托管解决方案
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fa fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">产品</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">功能特性</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">价格方案</a></li>
+                        <li><a href="#tech" class="text-gray-400 hover:text-white transition-colors">技术优势</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">API 文档</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">资源</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#guide" class="text-gray-400 hover:text-white transition-colors">使用指南</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">帮助中心</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">博客</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">开发者社区</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">公司</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">隐私政策</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2026 ImgSea. 保留所有权利
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm mr-6">隐私政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">服务条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300" aria-label="回到顶部">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 回到顶部按钮
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 性能优化：图片懒加载
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.loading = 'lazy';
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
+    </script>
+</body>
+</html>
