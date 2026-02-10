@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgSea - 專業圖片託管服務 | 高速、安全、無限存儲</title>
+    <meta name="description" content="ImgSea是專業的圖片託管服務，為開發者、設計師和內容創作者提供穩定、快速、安全的圖片託管解決方案。享受無限存儲、快速CDN交付和輕鬆集成到您的項目中。">
+    <meta name="keywords" content="圖片託管, 圖片上傳, CDN加速, ImgSea, 免費圖片託管, 專業圖片託管, 無限存儲, 圖片分享">
+    <meta name="author" content="ImgSea">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="yandex" content="index, follow">
+    <link rel="icon" type="image/png" href="https://imgsea.com/content/images/system/default/favicon.png" sizes="192x192">
+    <!-- Canonical and Hreflang Tags -->
+    <link rel="canonical" href="https://imgsea.github.io/zh-TW.html">
+    <link rel="alternate" hreflang="zh-TW" href="https://imgsea.github.io/zh-TW.html">
+    <link rel="alternate" hreflang="en" href="https://imgsea.github.io/index.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://imgsea.github.io/zh-CN.html">
+    <link rel="alternate" hreflang="es" href="https://imgsea.github.io/es.html">
+    <link rel="alternate" hreflang="de" href="https://imgsea.github.io/de.html">
+    <link rel="alternate" hreflang="ja" href="https://imgsea.github.io/ja.html">
+    <link rel="alternate" hreflang="fr" href="https://imgsea.github.io/fr.html">
+    <link rel="alternate" hreflang="x-default" href="https://imgsea.github.io/index.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="ImgSea - 專業圖片託管服務">
+    <meta property="og:description" content="無限存儲和全球CDN交付的穩定、快速、安全的圖片託管解決方案">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imgsea.github.io/zh-TW.html">
+    <meta property="og:image" content="https://picsum.photos/seed/imgsea/600/400">
+    <meta property="og:site_name" content="ImgSea">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ImgSea - 專業圖片託管服務">
+    <meta name="twitter:description" content="無限存儲和全球CDN交付的穩定、快速、安全的圖片託管解決方案">
+    <meta name="twitter:image" content="https://picsum.photos/seed/imgsea/600/400">
+    <meta name="twitter:site" content="@ImgSea">
+    <meta name="twitter:url" content="https://imgsea.github.io/zh-TW.html">
+    
+    <!-- Structured Data (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ImgSea",
+        "url": "https://imgsea.github.io/zh-TW.html",
+        "description": "專業的圖片託管服務，提供無限存儲和全球CDN交付的穩定、快速、安全的圖片託管解決方案",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://imgsea.github.io/zh-TW.html/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"KquvReXjjLI3PAbO",ck:"KquvReXjjLI3PAbO"})</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(135deg, #165DFF 0%, #0040C9 100%);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-dark">
+    <!-- 導航欄 -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-cloud-upload text-primary text-2xl"></i>
+                <span class="text-xl font-bold">ImgSea</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-primary transition-colors">功能特性</a>
+                <a href="#guide" class="text-gray-600 hover:text-primary transition-colors">使用指南</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary transition-colors">價格方案</a>
+                <a href="#tech" class="text-gray-600 hover:text-primary transition-colors">技術優勢</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-primary transition-colors">用戶評價</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center space-x-2 md:px-3 md:py-2">
+                        <i class="fa fa-globe text-sm"></i>
+                        <span class="text-sm">繁體中文</span>
+                        <i class="fa fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out">
+                        <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">English</a>
+                        <a href="es.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">Español</a>
+                        <a href="de.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">Deutsch</a>
+                        <a href="ja.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">日本語</a>
+                        <a href="fr.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">Français</a>
+                        <a href="zh-CN.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">简体中文</a>
+                    </div>
+                </div>
+                <a href="https://imgsea.com/login" class="px-4 py-2 text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors md:px-3 md:py-2">登入</a>
+                <a href="https://imgsea.com/signup" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors md:px-3 md:py-2">註冊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄區域 -->
+    <section class="pt-28 pb-20 bg-gradient-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-shadow">
+                        專業圖片託管服務
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90">
+                        為全球開發者、設計師和內容創作者提供穩定、快速、安全的圖片託管解決方案
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://imgsea.com/signup/" class="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                            免費開始使用
+                        </a>
+                        <a href="#features" class="px-8 py-3 bg-transparent border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <img src="https://picsum.photos/seed/imgsea/600/400" alt="ImgSea Demo - 專業圖片託管服務" class="rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌定位 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">西洋圖床 (ImgSea) - 您的專業圖片託管解決方案</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    ImgSea是一款專業的圖片託管服務，為開發者、設計師和內容創作者提供穩定、快速、安全的圖片存儲和託管服務。
+                    無論您是個人用戶還是企業客戶，ImgSea都能滿足您的各種圖片託管需求。
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">快速穩定</h3>
+                    <p class="text-gray-600">
+                        全球CDN加速，確保圖片加載速度快、穩定性高，為用戶提供流暢的瀏覽體驗。
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">安全可靠</h3>
+                    <p class="text-gray-600">
+                        多重數據加密存儲，嚴格的隱私保護措施，確保您的圖片數據安全無憂。
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">開發友好</h3>
+                    <p class="text-gray-600">
+                        豐富的API接口支持，輕鬆集成到您的網站或應用程序中，實現自動化管理。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能介紹 -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">主要功能特性</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    ImgSea提供豐富的功能特性，滿足您的各種圖片託管需求。
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">多種上傳方式</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>拖拽上傳 - 直接將圖片拖拽到上傳區域</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>URL上傳 - 通過圖片鏈接上傳圖片</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>文件選擇 - 從本地選擇文件上傳</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">支持多種格式</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>JPEG、PNG、GIF、WebP等主流格式</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>支持動態GIF圖片</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>自動格式優化，節省存儲空間</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">存儲空間</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>免費版提供10GB存儲空間</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>付費版提供無限存儲空間</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>智能存儲管理，自動清理無效文件</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">隱私保護</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>可設置圖片訪問權限</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>支持密碼保護圖片</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>嚴格的數據加密措施</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用指南 -->
+    <section id="guide" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">使用指南</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    輕鬆上手ImgSea，快速完成圖片託管。
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">註冊帳號</h3>
+                    <p class="text-gray-600">
+                        點擊註冊按鈕，填寫基本信息，完成帳號註冊。
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">上傳圖片</h3>
+                    <p class="text-gray-600">
+                        選擇您喜歡的上傳方式，上傳圖片文件。
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">獲取外鏈</h3>
+                    <p class="text-gray-600">
+                        上傳完成後，複製圖片外鏈，用於嵌入網站或應用。
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">管理圖片</h3>
+                    <p class="text-gray-600">
+                        在圖片庫中管理您的所有圖片，支持分類、標籤等功能。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 價格方案 -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">價格方案</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    選擇適合您的價格方案，滿足不同需求。
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold mb-4">免費版</h3>
+                    <div class="text-3xl font-bold text-primary mb-6">$0</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>10GB存儲空間</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>每月100GB帶寬</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>基本API接口</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-times text-gray-400 mt-1 mr-3"></i>
+                            <span>無廣告</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block text-center px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors">
+                        選擇免費版
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border-2 border-primary">
+                    <h3 class="text-xl font-bold mb-4">付費版</h3>
+                    <div class="text-3xl font-bold text-primary mb-6">$9.99/月</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>無限存儲空間</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>無限帶寬</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>高級API接口</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>無廣告體驗</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block text-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                        選擇付費版
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技術優勢 -->
+    <section id="tech" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">技術優勢</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    先進的技術架構，確保服務穩定可靠。
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">CDN加速</h3>
+                    <p class="text-gray-600">
+                        全球分佈式CDN網絡，確保圖片加載速度快、穩定性高。
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-mobile"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">多端適配</h3>
+                    <p class="text-gray-600">
+                        完美支持各種設備和瀏覽器，提供一致的用戶體驗。
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-code-fork"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">API支持</h3>
+                    <p class="text-gray-600">
+                        豐富的API接口，輕鬆集成到您的應用程序中。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用戶評價 -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">用戶評價</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    來自用戶的真實反饋。
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/seed/user1/100/100" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">張三</h4>
+                            <p class="text-gray-500 text-sm">開發者</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "ImgSea的速度真的很快，API接口也非常容易使用，大大提高了我的開發效率。"
+                    </p>
+                    <div class="text-yellow-400">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/seed/user2/100/100" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">李四</h4>
+                            <p class="text-gray-500 text-sm">設計師</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "作為一名設計師，我需要經常分享設計稿，ImgSea的穩定性和速度讓我非常滿意。"
+                    </p>
+                    <div class="text-yellow-400">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/seed/user3/100/100" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">王五</h4>
+                            <p class="text-gray-500 text-sm">內容創作者</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "免費版的存儲空間完全夠用，而且速度很快，沒有廣告干擾，非常推薦！"
+                    </p>
+                    <div class="text-yellow-400">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fa fa-cloud-upload text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">ImgSea</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        專業的圖片託管服務，為全球用戶提供穩定、快速、安全的圖片存儲解決方案。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">功能</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">功能特性</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">價格方案</a></li>
+                        <li><a href="#tech" class="text-gray-400 hover:text-white transition-colors">技術優勢</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">API文檔</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">資源</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#guide" class="text-gray-400 hover:text-white transition-colors">使用指南</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">幫助中心</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">博客</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">開發者社區</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">公司</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">關於我們</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">聯繫我們</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">隱私政策</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">服務條款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2026 ImgSea. 保留所有權利
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm mr-6">隱私政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">服務條款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300" aria-label="回到頂部">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 回到頂部按鈕
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 性能優化：圖片懶加載
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.loading = 'lazy';
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
+        
+        // Language Dropdown
+        const languageButton = document.querySelector('.relative button');
+        const languageDropdown = document.querySelector('.relative div[class*="opacity-0"]');
+        
+        if (languageButton && languageDropdown) {
+            languageButton.addEventListener('click', () => {
+                const isOpen = !languageDropdown.classList.contains('opacity-0');
+                
+                if (isOpen) {
+                    languageDropdown.classList.add('opacity-0', 'invisible');
+                    languageDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    languageButton.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                } else {
+                    languageDropdown.classList.remove('opacity-0', 'invisible');
+                    languageDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                    languageButton.querySelector('.fa-chevron-down').classList.add('rotate-180');
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!languageButton.contains(e.target) && !languageDropdown.contains(e.target)) {
+                    languageDropdown.classList.add('opacity-0', 'invisible');
+                    languageDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    languageButton.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

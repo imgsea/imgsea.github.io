@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cdn-cgi/
+
+Sitemap: https://imgsea.github.io/sitemap.xml
