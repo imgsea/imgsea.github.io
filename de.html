@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#165DFF">
     <title>ImgSea - Professioneller Bildspeicherdienst | Schnell, Sicher, Unbegrenzter Speicherplatz</title>
     <meta name="description" content="ImgSea ist ein professioneller Bildspeicherdienst, der stabile, schnelle und sichere Bildspeicherlösungen für Entwickler, Designer und Inhaltsersteller weltweit bietet. Genießen Sie unbegrenzten Speicherplatz, schnelle CDN-Zustellung und einfache Integration in Ihre Projekte.">
     <meta name="keywords" content="Bildspeicher, Bildupload, CDN-Beschleunigung, ImgSea, kostenloser Bildspeicher, professioneller Bildspeicher, unbegrenzter Speicherplatz, Bildfreigabe">
@@ -21,6 +22,7 @@
     <link rel="alternate" hreflang="ja" href="https://imgsea.github.io/ja.html">
     <link rel="alternate" hreflang="fr" href="https://imgsea.github.io/fr.html">
     <link rel="alternate" hreflang="zh-TW" href="https://imgsea.github.io/zh-TW.html">
+    <link rel="alternate" hreflang="ko" href="https://imgsea.github.io/ko.html">
     <link rel="alternate" hreflang="x-default" href="https://imgsea.github.io/index.html">
     
     <!-- Open Graph Tags -->
@@ -102,67 +104,140 @@
             }
         }
     </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            overflow-x: hidden;
+            overflow-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Nicer line breaks for headings (ignored by older browsers) */
+        h1, h2 {
+            text-wrap: balance;
+        }
+        /* Keep anchor targets clear of the fixed navigation bar */
+        section[id] {
+            scroll-margin-top: 5rem;
+        }
+        a, button {
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Comfortable touch targets inside the mobile menu */
+        @media (max-width: 1023.98px) {
+            #mobileMenu a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #mobileMenu .space-y-1 > a {
+                justify-content: flex-start;
+            }
+        }
+        /* Safe-area aware floating button (notched devices) */
+        #backToTop {
+            right: max(1.25rem, env(safe-area-inset-right));
+            bottom: max(1.5rem, env(safe-area-inset-bottom));
+        }
+        @media (min-width: 768px) {
+            #backToTop {
+                right: max(2rem, env(safe-area-inset-right));
+                bottom: max(2rem, env(safe-area-inset-bottom));
+            }
+        }
+        /* Respect reduced-motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 <body class="font-inter bg-gray-50 text-dark">
     <!-- Navigation -->
     <nav class="bg-white shadow-sm fixed w-full z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fa fa-cloud-upload text-primary text-2xl"></i>
-                <span class="text-xl font-bold">ImgSea</span>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#features" class="text-gray-600 hover:text-primary transition-colors">Funktionen</a>
-                <a href="#guide" class="text-gray-600 hover:text-primary transition-colors">Anleitung</a>
-                <a href="#pricing" class="text-gray-600 hover:text-primary transition-colors">Preise</a>
-                <a href="#tech" class="text-gray-600 hover:text-primary transition-colors">Technologie</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-primary transition-colors">Testimonials</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="relative">
-                    <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center space-x-2 md:px-3 md:py-2">
-                        <i class="fa fa-globe text-sm"></i>
-                        <span class="text-sm">Deutsch</span>
-                        <i class="fa fa-chevron-down text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out">
-                        <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">English</a>
-                        <a href="es.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">Español</a>
-                        <a href="ja.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">日本語</a>
-                        <a href="fr.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">Français</a>
-                        <a href="zh-CN.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">简体中文</a>
-                        <a href="zh-TW.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">繁體中文</a>
-                    </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-[4.5rem]">
+                <a href="#" class="flex items-center space-x-2 flex-shrink-0">
+                    <i class="fa fa-cloud-upload text-primary text-2xl"></i>
+                    <span class="text-xl font-bold">ImgSea</span>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-primary transition-colors whitespace-nowrap">Funktionen</a>
+                    <a href="#guide" class="text-gray-600 hover:text-primary transition-colors whitespace-nowrap">Anleitung</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-primary transition-colors whitespace-nowrap">Preise</a>
+                    <a href="#tech" class="text-gray-600 hover:text-primary transition-colors whitespace-nowrap">Technologie</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary transition-colors whitespace-nowrap">Testimonials</a>
                 </div>
-                <a href="https://imgsea.com/login" class="px-4 py-2 text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors md:px-3 md:py-2">Anmelden</a>
-                <a href="https://imgsea.com/signup" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors md:px-3 md:py-2">Registrieren</a>
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <div class="relative">
+                        <button id="langToggle" type="button" class="px-2.5 py-2 sm:px-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center space-x-1.5" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+                            <i class="fa fa-globe text-sm"></i>
+                            <span class="text-sm hidden sm:inline">Deutsch</span>
+                            <i class="fa fa-chevron-down text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div id="langMenu" class="absolute right-0 mt-2 w-44 sm:w-48 bg-white rounded-lg shadow-lg py-2 z-50 opacity-0 invisible transform translate-y-2 transition-all duration-300 ease-in-out">
+                            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">English</a>
+                            <a href="es.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">Español</a>
+                            <a href="fr.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">Français</a>
+                            <a href="zh-CN.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">简体中文</a>
+                            <a href="zh-TW.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">繁體中文</a>
+                            <a href="ko.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">한국어</a>
+                            <a href="ja.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors text-sm">日本語</a></div>
+                    </div>
+                    <a href="https://imgsea.com/login" class="hidden sm:inline-block px-3 py-2 text-sm text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors whitespace-nowrap">Anmelden</a>
+                    <a href="https://imgsea.com/signup" class="px-3 py-2 text-sm bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap">Registrieren</a>
+                    <button id="menuToggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-1 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors" aria-label="Navigationsmenü öffnen" aria-controls="mobileMenu" aria-expanded="false">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden border-t border-gray-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div class="container mx-auto px-4 sm:px-6 py-4 space-y-1">
+                <a href="#features" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium">Funktionen</a>
+                <a href="#guide" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium">Anleitung</a>
+                <a href="#pricing" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium">Preise</a>
+                <a href="#tech" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium">Technologie</a>
+                <a href="#testimonials" class="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium">Testimonials</a>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex flex-col gap-2">
+                    <a href="https://imgsea.com/login" class="w-full text-center px-4 py-2.5 text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors">Anmelden</a>
+                    <a href="https://imgsea.com/signup" class="w-full text-center px-4 py-2.5 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">Registrieren</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hauptbereich -->
-    <section class="pt-28 pb-20 bg-gradient-primary text-white">
-        <div class="container mx-auto px-4">
+    <section class="pt-24 md:pt-28 pb-16 md:pb-20 bg-gradient-primary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-shadow">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-shadow">
                         Professioneller Bildspeicherdienst
                     </h1>
-                    <p class="text-lg md:text-xl mb-8 opacity-90">
+                    <p class="text-base sm:text-lg md:text-xl mb-8 opacity-90">
                         Bieten Sie stabile, schnelle und sichere Bildspeicherlösungen für Entwickler, Designer und Inhaltsersteller weltweit
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://imgsea.com/signup" class="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://imgsea.com/signup" class="px-8 py-3 w-full sm:w-auto text-center bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
                             Kostenlos Starten
                         </a>
-                        <a href="#features" class="px-8 py-3 bg-transparent border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                        <a href="#features" class="px-8 py-3 w-full sm:w-auto text-center bg-transparent border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
                             Mehr Erfahren
                         </a>
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                        <img src="https://picsum.photos/seed/imgsea/600/400" alt="ImgSea Demo - Professioneller Bildspeicherdienst" class="rounded-xl shadow-lg">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
+                        <img src="https://picsum.photos/seed/imgsea/600/400" alt="ImgSea Demo - Professioneller Bildspeicherdienst" class="w-full h-auto rounded-xl shadow-lg">
                     </div>
                 </div>
             </div>
@@ -170,17 +245,17 @@
     </section>
 
     <!-- Markenpositionierung -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Markenpositionierung</h2>
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Markenpositionierung</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
                     ImgSea ist ein professioneller Bildspeicherdienst, der für globale Nutzer konzipiert ist und sich der Bereitstellung der stabilsten und effizientesten Bildspeichererfahrung verschrieben hat
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <i class="fa fa-cogs text-primary text-2xl"></i>
                     </div>
@@ -190,7 +265,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <i class="fa fa-users text-primary text-2xl"></i>
                     </div>
@@ -200,7 +275,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <i class="fa fa-trophy text-primary text-2xl"></i>
                     </div>
@@ -214,19 +289,19 @@
     </section>
 
     <!-- Funktionenbereich -->
-    <section id="features" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Funktionen</h2>
+    <section id="features" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Funktionen</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
                     Erfahren Sie alles über die leistungsstarken Funktionen von ImgSea, um all Ihre Bildspeicherbedürfnisse zu erfüllen
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 <div class="space-y-8">
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-upload text-primary text-xl"></i>
                         </div>
                         <div>
@@ -238,7 +313,7 @@
                     </div>
                     
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-file-image-o text-primary text-xl"></i>
                         </div>
                         <div>
@@ -250,7 +325,7 @@
                     </div>
                     
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-hdd-o text-primary text-xl"></i>
                         </div>
                         <div>
@@ -262,7 +337,7 @@
                     </div>
                     
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-bolt text-primary text-xl"></i>
                         </div>
                         <div>
@@ -276,7 +351,7 @@
                 
                 <div class="space-y-8">
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-lock text-primary text-xl"></i>
                         </div>
                         <div>
@@ -288,7 +363,7 @@
                     </div>
                     
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-shield text-primary text-xl"></i>
                         </div>
                         <div>
@@ -300,7 +375,7 @@
                     </div>
                     
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-paint-brush text-primary text-xl"></i>
                         </div>
                         <div>
@@ -312,7 +387,7 @@
                     </div>
                     
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                        <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mr-4 sm:mr-6">
                             <i class="fa fa-line-chart text-primary text-xl"></i>
                         </div>
                         <div>
@@ -328,17 +403,17 @@
     </section>
 
     <!-- Anleitung -->
-    <section id="guide" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Anleitung</h2>
+    <section id="guide" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Anleitung</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
                     Beginnen Sie mit dem ImgSea-Bildspeicherdienst in nur wenigen einfachen Schritten
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <span class="text-primary text-2xl font-bold">1</span>
                     </div>
@@ -348,7 +423,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <span class="text-primary text-2xl font-bold">2</span>
                     </div>
@@ -358,7 +433,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <span class="text-primary text-2xl font-bold">3</span>
                     </div>
@@ -368,7 +443,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <span class="text-primary text-2xl font-bold">4</span>
                     </div>
@@ -382,18 +457,18 @@
     </section>
 
     <!-- Preisbereich -->
-    <section id="pricing" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Preispläne</h2>
+    <section id="pricing" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Preispläne</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
                     Wählen Sie einen Plan, der zu Ihnen passt, und genießen Sie professionelle Bildspeicherdienste
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div class="p-8">
+                    <div class="p-6 sm:p-8">
                         <h3 class="text-2xl font-bold mb-2">Kostenloser Plan</h3>
                         <p class="text-gray-600 mb-6">Geeignet für private Nutzer und kleine Projekte</p>
                         <div class="text-4xl font-bold mb-6">$0<span class="text-lg font-normal text-gray-500">/permanent</span></div>
@@ -433,7 +508,7 @@
                     <div class="bg-primary text-white p-4">
                         <span class="text-sm font-semibold">Empfohlen</span>
                     </div>
-                    <div class="p-8">
+                    <div class="p-6 sm:p-8">
                         <h3 class="text-2xl font-bold mb-2">Professioneller Plan</h3>
                         <p class="text-gray-600 mb-6">Geeignet für professionelle Nutzer und kommerzielle Projekte</p>
                         <div class="text-4xl font-bold mb-6">$14.99<span class="text-lg font-normal text-gray-500">/Jahr</span></div>
@@ -473,17 +548,17 @@
     </section>
 
     <!-- Technische Vorteile -->
-    <section id="tech" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Technische Vorteile</h2>
+    <section id="tech" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Technische Vorteile</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
                     Die führende technische Architektur bietet eine zuverlässige Garantie für Ihren Bildspeicher
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <i class="fa fa-globe text-primary text-2xl"></i>
                     </div>
@@ -493,7 +568,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <i class="fa fa-mobile text-primary text-2xl"></i>
                     </div>
@@ -503,7 +578,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div class="bg-light rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                         <i class="fa fa-code text-primary text-2xl"></i>
                     </div>
@@ -517,17 +592,17 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Testimonials</h2>
+    <section id="testimonials" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Testimonials</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
                     Was unsere Nutzer sagen
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
                     <div class="flex items-center mb-6">
                         <img src="https://picsum.photos/seed/user1/100/100" alt="Max Mustermann - Frontend-Entwickler" class="w-16 h-16 rounded-full mr-4">
                         <div>
@@ -547,7 +622,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
                     <div class="flex items-center mb-6">
                         <img src="https://picsum.photos/seed/user2/100/100" alt="Anna Schmidt - UI-Designerin" class="w-16 h-16 rounded-full mr-4">
                         <div>
@@ -567,7 +642,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
                     <div class="flex items-center mb-6">
                         <img src="https://picsum.photos/seed/user3/100/100" alt="Michael Weber - Inhaltsersteller" class="w-16 h-16 rounded-full mr-4">
                         <div>
@@ -591,10 +666,10 @@
     </section>
 
     <!-- Fußzeile -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
+    <footer class="bg-dark text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <div class="col-span-2 md:col-span-1">
                     <div class="flex items-center space-x-2 mb-6">
                         <i class="fa fa-cloud-upload text-primary text-2xl"></i>
                         <span class="text-xl font-bold">ImgSea</span>
@@ -646,7 +721,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="border-t border-gray-700 mt-10 md:mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-center md:text-left">
                 <p class="text-gray-400 text-sm">
                     © 2026 ImgSea. Alle Rechte vorbehalten
                 </p>
@@ -661,7 +736,7 @@
     </footer>
 
     <!-- Zurück nach Oben Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300" aria-label="Zurück nach oben">
+    <button id="backToTop" class="fixed bottom-6 right-5 md:bottom-8 md:right-8 z-40 bg-primary text-white w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300" aria-label="Zurück nach oben">
         <i class="fa fa-arrow-up"></i>
     </button>
 
@@ -704,31 +779,85 @@
         });
         
         // Language Dropdown
-        const languageButton = document.querySelector('.relative button');
-        const languageDropdown = document.querySelector('.relative div[class*="opacity-0"]');
-        
+        const languageButton = document.getElementById('langToggle');
+        const languageDropdown = document.getElementById('langMenu');
+        const languageChevron = languageButton ? languageButton.querySelector('.fa-chevron-down') : null;
+
+        function closeLanguageDropdown() {
+            if (!languageButton || !languageDropdown) return;
+            languageDropdown.classList.add('opacity-0', 'invisible');
+            languageDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            if (languageChevron) languageChevron.classList.remove('rotate-180');
+            languageButton.setAttribute('aria-expanded', 'false');
+        }
+
         if (languageButton && languageDropdown) {
-            languageButton.addEventListener('click', () => {
+            languageButton.addEventListener('click', (e) => {
+                e.stopPropagation();
                 const isOpen = !languageDropdown.classList.contains('opacity-0');
-                
+
                 if (isOpen) {
-                    languageDropdown.classList.add('opacity-0', 'invisible');
-                    languageDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                    languageButton.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                    closeLanguageDropdown();
                 } else {
                     languageDropdown.classList.remove('opacity-0', 'invisible');
                     languageDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
-                    languageButton.querySelector('.fa-chevron-down').classList.add('rotate-180');
+                    if (languageChevron) languageChevron.classList.add('rotate-180');
+                    languageButton.setAttribute('aria-expanded', 'true');
                 }
             });
-            
+
             // Close dropdown when clicking outside
             document.addEventListener('click', (e) => {
                 if (!languageButton.contains(e.target) && !languageDropdown.contains(e.target)) {
-                    languageDropdown.classList.add('opacity-0', 'invisible');
-                    languageDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                    languageButton.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                    closeLanguageDropdown();
                 }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeLanguageDropdown();
+            });
+        }
+
+        // Mobile Navigation Menu
+        const menuButton = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = menuButton ? menuButton.querySelector('i') : null;
+
+        function closeMobileMenu() {
+            if (!menuButton || !mobileMenu) return;
+            mobileMenu.classList.add('hidden');
+            if (menuIcon) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+            menuButton.setAttribute('aria-expanded', 'false');
+        }
+
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = !mobileMenu.classList.contains('hidden');
+
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    if (menuIcon) {
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-times');
+                    }
+                    menuButton.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // Close the menu after a navigation link is tapped
+            mobileMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Reset when the viewport grows to the desktop layout
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1024) closeMobileMenu();
             });
         }
     </script>
