@@ -13,6 +13,12 @@
     <meta name="bingbot" content="index, follow">
     <meta name="yandex" content="index, follow">
     <link rel="icon" type="image/png" href="https://imgsea.com/content/images/system/default/favicon.png" sizes="192x192">
+
+    <!-- Warm up the third-party origins the page actually contacts -->
+    <link rel="preconnect" href="https://picsum.photos">
+    <link rel="dns-prefetch" href="https://fastly.picsum.photos">
+    <link rel="dns-prefetch" href="https://sdk.51.la">
+    <link rel="dns-prefetch" href="https://collect-v6.51.la">
     <!-- Canonical and Hreflang Tags -->
     <link rel="canonical" href="https://imgsea.github.io/zh-TW.html">
     <link rel="alternate" hreflang="zh-TW" href="https://imgsea.github.io/zh-TW.html">
@@ -48,12 +54,7 @@
         "@type": "WebSite",
         "name": "ImgSea",
         "url": "https://imgsea.github.io/zh-TW.html",
-        "description": "專業的圖片託管服務，提供無限存儲和全球CDN交付的穩定、快速、安全的圖片託管解決方案",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://imgsea.github.io/zh-TW.html/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
+        "description": "專業的圖片託管服務，提供無限存儲和全球CDN交付的穩定、快速、安全的圖片託管解決方案"
     }
     </script>
     <script>
@@ -70,40 +71,17 @@
             s.parentNode.insertBefore(bp, s);
         })();
     </script>
-    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    <script>LA.init({id:"KquvReXjjLI3PAbO",ck:"KquvReXjjLI3PAbO"})</script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 51.la analytics. The config is queued on window.LA so the SDK can load
+         async without blocking the parser; the SDK picks up LA.ids on arrival. -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#165DFF',
-                        secondary: '#36CFC9',
-                        dark: '#1D2129',
-                        light: '#F2F3F5'
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
+        window.LA = window.LA || { ids: [] };
+        window.LA.ids.push({ id: "KquvReXjjLI3PAbO", ck: "KquvReXjjLI3PAbO" });
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .bg-gradient-primary {
-                background: linear-gradient(135deg, #165DFF 0%, #0040C9 100%);
-            }
-        }
-    </style>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js" async></script>
+    <!-- Font Awesome 4.7, subset to the 29 icons used on this site -->
+    <link rel="preload" href="assets/fonts/fontawesome-subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -237,7 +215,7 @@
                 </div>
                 <div class="md:w-1/2">
                     <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
-                        <img src="https://picsum.photos/seed/imgsea/600/400" alt="ImgSea Demo - 專業圖片託管服務" class="w-full h-auto rounded-xl shadow-lg">
+                        <img src="https://picsum.photos/seed/imgsea/600/400" width="600" height="400" fetchpriority="high" alt="ImgSea Demo - 專業圖片託管服務" class="w-full h-auto rounded-xl shadow-lg">
                     </div>
                 </div>
             </div>
@@ -449,7 +427,7 @@
                             <span>無廣告</span>
                         </li>
                     </ul>
-                    <a href="#" class="block text-center px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors">
+                    <a href="https://imgsea.com/signup" class="block text-center px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors">
                         選擇免費版
                     </a>
                 </div>
@@ -474,7 +452,7 @@
                             <span>無廣告體驗</span>
                         </li>
                     </ul>
-                    <a href="#" class="block text-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                    <a href="https://imgsea.com/signup" class="block text-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
                         選擇付費版
                     </a>
                 </div>
@@ -535,7 +513,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
-                        <img src="https://picsum.photos/seed/user1/100/100" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://picsum.photos/seed/user1/100/100" width="100" height="100" loading="lazy" decoding="async" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold">張三</h4>
                             <p class="text-gray-500 text-sm">開發者</p>
@@ -554,7 +532,7 @@
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
-                        <img src="https://picsum.photos/seed/user2/100/100" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://picsum.photos/seed/user2/100/100" width="100" height="100" loading="lazy" decoding="async" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold">李四</h4>
                             <p class="text-gray-500 text-sm">設計師</p>
@@ -573,7 +551,7 @@
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
-                        <img src="https://picsum.photos/seed/user3/100/100" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://picsum.photos/seed/user3/100/100" width="100" height="100" loading="lazy" decoding="async" alt="用戶頭像" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold">王五</h4>
                             <p class="text-gray-500 text-sm">內容創作者</p>

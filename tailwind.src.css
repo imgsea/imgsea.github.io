@@ -1,0 +1,21 @@
+/* Source stylesheet for the pre-compiled Tailwind build.
+ *
+ * Mirrors what used to live in <script>tailwind.config</script> plus the
+ * <style type="text/tailwindcss"> block in each page's <head>.
+ * Build output goes to assets/css/tailwind.css.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #165DFF 0%, #0040C9 100%);
+  }
+}
